@@ -1,0 +1,87 @@
+// Variables
+
+$bickery-red: #d61c22;
+
+// Bickery Site
+
+body {
+  font-size: 1.2rem;
+  color: #666666;
+}
+
+a {
+  color: #666666;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ec1d25;
+}
+
+.bickery-logo {
+	width: 75px;
+}
+
+.bickery-logo-menu {
+  width: 70px;
+  margin-bottom: 10px;
+}
+
+.bickery-home-video {
+	height: 100vh;
+	width: 100vw;
+	width: 100%;
+	object-fit: cover;
+}
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1050; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: white; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav a {
+  padding: 8px 8px 0px 8px;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  transition: 0.3s;
+  font-size: 1.2rem;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.nav {
+  text-align: center;
+}
+
+.navbar-nav .nav-item {
+  float: inherit;
+  display: inline-block;
+}
+
+.nav-item.search-input {
+  width: 10% !important;
+}
+
+#main {
+  transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
