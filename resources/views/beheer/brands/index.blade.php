@@ -15,6 +15,7 @@
                     <thead>
                       <tr>
                         <th scope="col">Merk</th>
+                        <th scope="col">Zichtbaarheid</th>
                         <th scope="col">Categorie</th>
                         <th scope="col">Producten</th>
                         <th scope="col">Acties</th>
@@ -24,6 +25,7 @@
                       @foreach($brands as $brand)
                       <tr>
                         <td scope="col">{{ $brand->brand_name }}</td>
+                        <td>{!! $brand->brand_hidden == 0 ? '<i class="far fa-eye"></i>' : '<i class="far fa-eye-slash"></i>' !!}</td>
                         <td scope="col">{{ $brand->categories->category_name }}</td>
                         <td scope="col">{{ $brand->products->count() }}</td>
                         <td>

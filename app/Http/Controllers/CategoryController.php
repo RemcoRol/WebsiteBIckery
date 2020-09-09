@@ -48,6 +48,7 @@ class CategoryController extends Controller
         $request->validate([
             'category_name' => 'required',
             'category_type' => 'required',
+            'category_hidden' => 'required',
         ]);
         $this->categoryRepository->create($request->all());
 
@@ -89,9 +90,10 @@ class CategoryController extends Controller
       $request->validate([
           'category_name' => 'required',
           'category_type' => 'required',
+          'category_hidden' => 'required',
       ]);
 
-      $category = $this->categoryRepository->get($id)->update($request->all());
+      $this->categoryRepository->get($id)->update($request->all());
 
       return redirect()->route('beheer.categories.index')->with('success', 'Categorie is successvol bijgewerkt!');
     }

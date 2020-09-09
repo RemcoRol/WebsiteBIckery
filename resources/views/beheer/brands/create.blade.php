@@ -21,6 +21,15 @@
                 <div class="card-body">
                   <form onsubmit="{{ route('beheer.brands.store') }}" method="POST">
                     @csrf
+
+                    <div class="form-group">
+                        <label>Zichtbaarheid:</label>
+                        <select class="custom-select" name="brand_hidden">
+                            <option value="0">Zichtbaar</option>
+                            <option value="1">Verborgen</option>
+                        </select>
+                    </div>
+
                     <div class="form-group">
                       <label>Merk naam:</label>
                       <input type="text" name="brand_name" value="{{ old('brand_name') }}" class="form-control" placeholder="Merk naam">
@@ -34,6 +43,17 @@
                         @endforeach
                       </select>
                     </div>
+
+                    <div class="form-group">
+                      <label>Logo:</label>
+                      <input type="file" name="product_image" value="{{ old('product_image') }}" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Sfeerafbeelding:</label>
+                      <input type="file" name="product_image" value="{{ old('product_image') }}" class="form-control">
+                    </div>
+
                     <button type="submit" class="btn btn-primary float-right">Opslaan</button>
                   </form>
                 </div>

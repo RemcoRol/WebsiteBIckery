@@ -38,6 +38,17 @@ class BrandRepository extends BaseRepository implements BrandRepositoryInterface
     }
 
     /**
+     * Get's all brands by ordername
+     *
+     * @param int
+     * @return Brand
+     */
+    public function orderBy($orderBy)
+    {
+        return Brand::orderBy($orderBy)->get();
+    }
+
+    /**
     * Deletes a post.
     *
     * @param int

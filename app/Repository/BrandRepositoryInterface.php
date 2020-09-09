@@ -21,4 +21,11 @@ interface BrandRepositoryInterface
     * @param int
     */
   public function get($brand_id);
+
+    /**
+     * Get's a post by it's ID
+     *
+     * @param int
+     */
+    public function orderBy($orderBy);
 }

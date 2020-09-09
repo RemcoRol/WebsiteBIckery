@@ -19,9 +19,10 @@ class CreateProductsTable extends Migration
             $table->integer('brand_id')->unsigned();
             $table->foreign('brand_id')->references('id')->on('brands')
             ->onDelete('cascade');
-            $table->integer('product_image_id')->unsigned();
+            $table->integer('product_image_id')->unsigned()->nullable();
             $table->foreign('product_image_id')->references('id')->on('product_images')
             ->onDelete('cascade');
+            $table->boolean('product_hidden');
             $table->timestamps();
         });
     }

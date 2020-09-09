@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="ROBOTS" name="NOINDEX, NOFOLLOW">
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -28,7 +30,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="#">
-                <img class="bickery-logo" src="{{ asset('images/bickery.png')}}">
+                <img class="bickery-logo" src="{{ asset('images/misc/bickery.png')}}">
             </a>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
@@ -116,26 +118,31 @@
                             <span class="menu-collapsed">Categoriën</span>
                         </div>
                     </a>
-                    <!-- Submenu content -->
-                    <a href="#submenu3" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+
+                    <a href="{{ route('beheer.pages.index') }}" class="bg-dark list-group-item list-group-item-action">
                         <div class="d-flex w-100 justify-content-start align-items-center">
                             <span class="far fa-file fa-fw mr-3"></span>
                             <span class="menu-collapsed">Pagina's</span>
                             <span class="submenu-icon ml-auto"></span>
                         </div>
                     </a>
-                    <!-- Submenu content -->
-                    <div id='submenu3' class="collapse sidebar-submenu">
-                        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                            <span class="menu-collapsed">Nieuws</span>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                            <span class="menu-collapsed">Testimonials</span>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                            <span class="menu-collapsed">Vacatures</span>
-                        </a>
-                    </div>
+
+                    <a href="{{ route('beheer.menus.index') }}" class="bg-dark list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span class="far fa-caret-square-down fa-fw mr-3"></span>
+                            <span class="menu-collapsed">Menu</span>
+                            <span class="submenu-icon ml-auto"></span>
+                        </div>
+                    </a>
+
+                    <a href="{{ route('beheer.images.index') }}" class="bg-dark list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span class="far fa-images fa-fw mr-3"></span>
+                            <span class="menu-collapsed">Afbeeldingen</span>
+                            <span class="submenu-icon ml-auto"></span>
+                        </div>
+                    </a>
+
                     <!-- Separator with title -->
                     <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
                         <small>OPTIONS</small>

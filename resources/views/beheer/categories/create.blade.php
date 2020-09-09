@@ -22,6 +22,13 @@
                   <form onsubmit="{{ route('beheer.categories.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
+                      <label>Zichtbaarheid:</label>
+                      <select class="custom-select" name="category_hidden">
+                          <option value="0">Zichtbaar</option>
+                          <option value="1">Verborgen</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
                       <label>Categorie naam:</label>
                       <input type="text" name="category_name" value="{{ old('category_type') }}" class="form-control" placeholder="Categorie naam">
                     </div>

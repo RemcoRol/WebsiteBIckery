@@ -17,6 +17,7 @@ class CreateCategoriesTable extends Migration
             $table->id('id');
             $table->string('category_name')->unique();
             $table->boolean('category_type');
+            $table->boolean('category_hidden');
             $table->timestamps();
         });
     }

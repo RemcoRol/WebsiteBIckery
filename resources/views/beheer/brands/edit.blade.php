@@ -22,7 +22,14 @@
                     @csrf
                     {{ method_field('PATCH') }}
                     <div class="form-group">
-                      <label>Categorie naam:</label>
+                      <label>Zichtbaarheid:</label>
+                      <select class="custom-select" name="brand_hidden">
+                          <option value="0" @if ($brand->brand_hidden === 0) selected @endif>Zichtbaar</option>
+                          <option value="1" @if ($brand->brand_hidden === 1) selected @endif>Verborgen</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Merk naam:</label>
                       <input type="text" name="brand_name" value="{{ $brand->brand_name ? $brand->brand_name : old('brand_name') }}" class="form-control" placeholder="Categorie naam">
                     </div>
                     <div class="form-group">

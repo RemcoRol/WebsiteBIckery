@@ -16,6 +16,7 @@
                     <thead>
                       <tr>
                         <th scope="col">Categoriën</th>
+                        <th scope="col">Zichtbaarheid</th>
                         <th scope="col">Merken</th>
                         <th scope="col">Type</th>
                         <th scope="col">Acties</th>
@@ -25,6 +26,7 @@
                       @foreach ($categories as $category)
                       <tr>
                         <td>{{ $category->category_name }}</td>
+                        <td>{!! $category->category_hidden == 0 ? '<i class="far fa-eye"></i>' : '<i class="far fa-eye-slash"></i>' !!}</td>
                         <td>{{ $category->merken->count() }}</td>
                         <td>{!! $category->category_type == 0 ? '<span class="badge badge-danger">Brands</span>' : '<span class="badge badge-success">Kerst</span>' !!}</td>
                         <td>

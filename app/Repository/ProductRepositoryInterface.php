@@ -21,4 +21,7 @@ interface ProductRepositoryInterface
     * @param int
     */
   public function get($product_id);
+
+
+  public function update(array $data, $id);
 }

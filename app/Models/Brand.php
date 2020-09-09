@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Brand extends Model
 {
+
   public function categories()
   {
   	return $this->belongsTo(Categories::class);
@@ -22,6 +23,6 @@ class Brand extends Model
   * @var array
   */
   protected $fillable = [
-    'brand_name', 'categories_id',
+    'brand_name', 'categories_id', 'brand_hidden'
   ];
 }

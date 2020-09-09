@@ -10,7 +10,7 @@
       @keydown.up.exact.prevent="startArrowKeys"
       @keydown.down.exact.prevent="startArrowKeys"
     >
-      <img :src="`/images/vlag_${locale}.svg`" alt="flag" class="w-8 h-8">
+      <img :src="`/images/misc/vlag_${locale}.svg`" alt="flag" class="w-8 h-8">
       <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"></path></svg>
     </button>
     <transition name="dropdown-fade">
@@ -25,7 +25,7 @@
             @keydown.tab.exact="hideDropdown"
             @keydown.esc.exact="hideDropdown"
           >
-            <img src="/images/vlag_nl.svg" alt="nederlands vlag" class="h-8 w-8">
+            <img src="/images/misc/vlag_nl.svg" alt="nederlands vlag" class="h-8 w-8">
             <span class="ml-2">Nederlands</span>
           </a>
         </li>
@@ -39,7 +39,7 @@
             @keydown.down.exact.prevent="focusNext(true)"
             @keydown.esc.exact="hideDropdown"
           >
-            <img src="/images/vlag_en.svg" alt="english flag" class="h-8 w-8">
+            <img src="/images/misc/vlag_en.svg" alt="english flag" class="h-8 w-8">
             <span class="ml-2">English</span>
           </a>
         </li>

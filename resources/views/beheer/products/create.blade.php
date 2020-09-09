@@ -19,13 +19,21 @@
                 </div>
 
                 <div class="card-body">
-                  {{--
-                  <product-creation v-bind:brands="{{ json_encode($brands) }}">
+                    <flash message="" title=""></flash>
+                    <product-creation v-bind:brands="{{ json_encode($brands) }}">
 
-                  </product-creation>
-                  --}}
+                    </product-creation>
+
+                  {{--
                   <form onsubmit="{{ route('beheer.products.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
+                    <div class="form-group">
+                      <label>Zichtbaarheid:</label>
+                      <select class="custom-select" name="product_hidden">
+                          <option value="0">Zichtbaar</option>
+                          <option value="1">Verborgen</option>
+                      </select>
+                    </div>
                     <div class="form-group">
                       <label>Product naam:</label>
                       <input type="text" name="product_name" value="{{ old('product_name') }}" class="form-control" placeholder="Product naam">
@@ -45,7 +53,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary float-right">Opslaan</button>
                   </form>
-
+                    --}}
                 </div>
             </div>
         </div>

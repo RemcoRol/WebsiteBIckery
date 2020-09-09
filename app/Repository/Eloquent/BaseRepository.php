@@ -40,4 +40,5 @@ class BaseRepository implements EloquentRepositoryInterface
     {
         return $this->model->find($id);
     }
+
 }

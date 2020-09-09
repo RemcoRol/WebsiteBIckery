@@ -8,6 +8,12 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+window.events = new Vue();
+
+window.flash = function(message) {
+    window.events.$emit('flash',message);
+}
+
 import { Form, HasError, AlertError } from 'vform'
 
 Vue.component(HasError.name, HasError)
@@ -32,11 +38,12 @@ Vue.component(AlertError.name, AlertError)
 
 // Products
 Vue.component('product-creation', require('./beheer/components/products/ProductCreation.vue').default);
-
+Vue.component('product-index', require('./beheer/components/products/ProductIndex.vue').default);
 // Client components
-
 Vue.component('language-switcher', require('./clients/components/LanguageSwitcher.vue').default);
 
+// Misc components
+Vue.component('flash', require('./components/Flash.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

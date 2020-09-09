@@ -22,7 +22,7 @@ class ProductController extends Controller
     public function __construct(ProductRepositoryInterface $productRepository, BrandRepositoryInterface $brandRepository, ProductImageRepositoryInterface $productImageRepository)
     {
         $this->productRepository = $productRepository;
-        $this->ProductImageRepository = $productImageRepository;
+        $this->productImageRepository = $productImageRepository;
         $this->brandRepository   = $brandRepository;
     }
     /**
@@ -66,24 +66,29 @@ class ProductController extends Controller
         $request->validate([
             'product_name' => 'required',
             'brand_id' => 'required',
-            'product_image' => 'required|image|mimes:jpeg,png,jpg|max:2048'
+            'product_image' => 'image|mimes:jpeg,png,jpg|max:2048',
+            'product_hidden' => 'required',
         ]);
+
         $createdProduct = $this->productRepository->create($request->all());
+
         if ($request->has('product_image')) {
             // Get image file
             $image = $request->file('product_image');
             // Make a image name based on user name and current timestamp
             $name = Str::slug($request->input('product_name')).'_'.time();
             // Define folder path
-            $folder = 'images/products/product_images/';
+            $folder = 'images/products/' . $createdProduct->brand->brand_name . '/product_images/';
             // Make a file path where image will be stored [ folder path + file name + file extension]
             $product_image_url = $folder . $name. '.' . $image->getClientOriginalExtension();
             // Upload image
-            $this->uploadOne($image, $folder, 'public', $name);
+            $this->uploadPackShot($image, $folder, 'public', $name);
             // Set user profile image path in database to filePath
             //$user->profile_image = $filePath;
 
-            $this->ProductImageRepository->create(['product_image_url' => $product_image_url, 'product_id' => $createdProduct->id]);
+            $productImage = $this->productImageRepository->create(['product_image_url' => $product_image_url, 'product_id' => $createdProduct->id]);
+
+            $this->productRepository->update(['product_image_id' => $productImage->id], $createdProduct->id);
         }
 
         return redirect()->route('beheer.products.index')->with('success', 'Product is successvol toegevoegd!');

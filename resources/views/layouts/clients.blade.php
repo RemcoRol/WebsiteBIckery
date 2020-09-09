@@ -29,8 +29,8 @@
           <img src="{{ asset('images/bickery.png') }}" class="mb-5 bickery-logo-menu mx-auto d-block">
           <language-switcher
             locale="{{ app()->getLocale() }}"
-            link-en="{{ route(Route::currentRouteName(), 'en') }}"
-            link-nl="{{ route(Route::currentRouteName(), 'nl') }}"
+            link-en="{{ route(Route::currentRouteName(), ['en', Request::segment(2)]) }}"
+            link-nl="{{ route(Route::currentRouteName(), ['nl', Request::segment(2)]) }}"
           ></language-switcher>
           <a href="#">Home</a>
           <a href="#">Over Ons</a>
@@ -47,73 +47,40 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
           <a class="navbar-brand" href="{{ url('/') }}">
-              <img src="{{ asset('images/bickery.png') }}" class="bickery-logo">
+              <img src="{{ asset('images/misc/bickery.png') }}" class="bickery-logo">
           </a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Over ons</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Premium Brands
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Premium Food</a>
-                  <a class="dropdown-item" href="#">Premium Drinks</a>
-                  <a class="dropdown-item" href="#">Brands Webshop</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Geschenkpakketten
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Thema Collecties</a>
-                  <a class="dropdown-item" href="#">Premium Brands</a>
-                  <a class="dropdown-item" href="#">Kerst Webshop</a>
-                  <a class="dropdown-item" href="#">Kerst Brochure</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Werken bij</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Nieuws</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Contact
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Contact formulier</a>
-                  <a class="dropdown-item" href="#">035 656 0244</a>
-                  <a class="dropdown-item" href="#">info@bickery.nl</a>
-                </div>
-              </li>
+              @foreach($menus as $menu)
+                  @if(count($menu->childs))
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ __('site.navigation.' . $menu->page->page_slug) }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            @include('layouts.manageChild',['childs' => $menu->childs])
+                        </div>
+                    </li>
+
+                  @else
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('*/' . $menu->page->page_slug) ? 'active' : ''}}" href="{{ $menu->page ? $menu->page->getRedirectUrl() : '' }}">{{ __('site.navigation.' . $menu->page->page_slug) }}</a>
+                    </li>
+                  @endif
+              @endforeach
             </ul>
           </div>
           <language-switcher
             class="nav-link"
             locale="{{ app()->getLocale() }}"
-            link-en="{{ route(Route::currentRouteName(), 'en') }}"
-            link-nl="{{ route(Route::currentRouteName(), 'nl') }}"
+            link-en="{{ route(Route::currentRouteName(), ['en', Request::segment(2)]) }}"
+            link-nl="{{ route(Route::currentRouteName(), ['nl', Request::segment(2)]) }}"
           ></language-switcher>
-          <div class="input-group nav-item search-input">
-            <input type="text" class="form-control" placeholder="Zoek hier...">
-            <div class="input-group-append">
-              <button class="btn btn-secondary" type="button">
-                <i class="fa fa-search"></i>
-              </button>
-            </div>
-          </div>
         </nav>
 
         {{--
@@ -148,6 +115,5 @@
 </body>
 <footer>
     <script src="{{ asset('js/main-client.js') }}" defer></script>
-
 </footer>
 </html>

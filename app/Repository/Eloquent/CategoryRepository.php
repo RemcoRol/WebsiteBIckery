@@ -38,6 +38,15 @@ class CategoryRepository extends BaseRepository implements CategoryRepositoryInt
         return Categories::findOrFail($category_id);
     }
 
+    public function getByName($categoryName)
+    {
+        $category = Categories::where('category_name', '=', $categoryName)->first();
+
+        if ($category) return $category;
+
+        abort(404);
+    }
+
     /**
     * Deletes a post.
     *
