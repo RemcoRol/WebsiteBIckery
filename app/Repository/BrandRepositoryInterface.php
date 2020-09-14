@@ -28,4 +28,6 @@ interface BrandRepositoryInterface
      * @param int
      */
     public function orderBy($orderBy);
+
+    public function create(array $all);
 }

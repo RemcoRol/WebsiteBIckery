@@ -4,7 +4,7 @@ namespace App\Repository;
 use App\Models\BrandImage;
 use Illuminate\Support\Collection;
 
-interface ProductImageRepositoryInterface
+interface BrandImageRepositoryInterface
 {
    public function all(): Collection;
 
@@ -21,4 +21,6 @@ interface ProductImageRepositoryInterface
     * @param int
     */
   public function get($brand_image_id);
+
+  public function create(array $array);
 }

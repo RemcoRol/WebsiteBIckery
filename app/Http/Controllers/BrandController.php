@@ -3,21 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use App\Models\BrandImage;
 use App\Repository\BrandRepositoryInterface;
+use App\Repository\BrandImageRepositoryInterface;
 use App\Repository\CategoryRepositoryInterface;
+use App\Traits\UploadTrait;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class BrandController extends Controller
 {
+    use UploadTrait;
    private $brandRepository;
    private $categoryRepository;
    private $brandImageRepository;
 
-   public function __construct(BrandRepositoryInterface $brandRepository, CategoryRepositoryInterface $categoryRepository, BrandImageRepository $brandImageRepository)
+   public function __construct(BrandRepositoryInterface $brandRepository, CategoryRepositoryInterface $categoryRepository, BrandImageRepositoryInterface $brandImageRepository)
    {
        $this->brandRepository = $brandRepository;
        $this->categoryRepository = $categoryRepository;
-       $this->BrandImageRepository = $brandImageRepository;
+       $this->brandImageRepository = $brandImageRepository;
    }
 
    public function index()
@@ -45,23 +50,27 @@ class BrandController extends Controller
     */
    public function store(Request $request)
    {
-       $request->validate([
+       $validatedData = $request->validate([
            'brand_name' => 'required',
            'categories_id' => 'required',
            'brand_hidden' => 'required',
+           'product_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+           'product_logo_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
        ]);
 
-       if ($request->has('image')) {
+       $brandId = $this->brandRepository->create($request->all());
+
+       if ($request->has('product_image')) {
            // Get image file
-           $image = $request->file('image');
+           $image = $request->file('product_image');
            // Make a image name based on user name and current timestamp
-           $name = Str::slug($request->input('image_name'));
+           $name = Str::slug($validatedData['brand_name']);
            // Define folder path
-           $folder = 'images/site/brands/' + $request->('brand_name');
+           $folder = 'images/site/brands/' . $validatedData['brand_name'];
            // Make a file path where image will be stored [ folder path + file name + file extension]
            $product_image_url = $folder . $name. '.' . $image->getClientOriginalExtension();
            // Upload image
-           $this->uploadGlobalImage($image, $folder, 'public', $name);
+           $this->uploadBrandImage($image, $folder, 'public', $name);
            // Set user profile image path in database to filePath
            //$user->profile_image = $filePath;
 
@@ -70,21 +79,18 @@ class BrandController extends Controller
            $imageMobilePath = $replaced = Str::replaceArray('original', ['mobile_photos'], $product_image_url);
            $imageTinyPath = $replaced = Str::replaceArray('original', ['tiny_photos'], $product_image_url);
 
-           $this->imageRepository->create([
-               'image_name' => $request['image_name'],
-               'image_alt_text' => $request['image_alt_text'],
-               'image_original_url' => $product_image_url,
-               'image_large_url' => $imageLargePath,
-               'image_medium_url' => $imageMediumPath,
-               'image_mobile_url' => $imageMobilePath,
-               'image_tiny_url' => $imageTinyPath,
-               'page_id' => $request['page_id']
 
+           $this->brandImageRepository->create([
+               'brand_image_name' => $validatedData['brand_name'],
+               'brand_image_alt_text' => $validatedData['brand_name'],
+               'brand_image_original_url' => $product_image_url,
+               'brand_image_large_url' => $imageLargePath,
+               'brand_image_medium_url' => $imageMediumPath,
+               'brand_image_mobile_url' => $imageMobilePath,
+               'brand_image_tiny_url' => $imageTinyPath,
+               'brand_id' => $brandId->id
            ]);
-           return redirect()->route('beheer.images.index')->with('success', 'Afbeelding is successvol toegevoegd!');
        }
-
-       $this->brandRepository->create($request->all());
 
        return redirect()->route('beheer.brands.index')->with('success', 'Brand is successvol toegevoegd!');
    }
@@ -156,8 +162,6 @@ class BrandController extends Controller
 
              \File::delete($productImage->product_image_url);
 
-           }else{
-             dd('File does not exists.');
            }
            // Remove child model
            $productImage->delete();

@@ -24,8 +24,8 @@ class MenuTableSeeder extends Seeder
             ['menu_title' => 'Werken bij', 'menu_hidden' => 0, 'menu_parent_id' => 0, 'page_id' => 9],
             ['menu_title' => 'Testimonials', 'menu_hidden' => 0, 'menu_parent_id' => 9, 'page_id' => 10],
             ['menu_title' => 'Vacatures', 'menu_hidden' => 0, 'menu_parent_id' => 9, 'page_id' => 11],
-            ['menu_title' => 'Contact', 'menu_hidden' => 0, 'menu_parent_id' => 0, 'page_id' => 12],
-            ['menu_title' => 'Nieuws', 'menu_hidden' => 0, 'menu_parent_id' => 0, 'page_id' => 13],
+            ['menu_title' => 'Nieuws', 'menu_hidden' => 0, 'menu_parent_id' => 0, 'page_id' => 12],
+            ['menu_title' => 'Contact', 'menu_hidden' => 0, 'menu_parent_id' => 0, 'page_id' => 13],
         ]);
     }
 }

@@ -192,7 +192,7 @@ $('#tree-menu').treed();
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\wamp64\www\BickeryLaravel\Website\resources\js\beheer\main-beheer.js */"./resources/js/beheer/main-beheer.js");
+module.exports = __webpack_require__(/*! D:\wampp\www\BickerySite\site\resources\js\beheer\main-beheer.js */"./resources/js/beheer/main-beheer.js");
 
 
 /***/ })

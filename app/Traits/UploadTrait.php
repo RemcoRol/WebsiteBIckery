@@ -6,6 +6,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\File;
 
 trait UploadTrait
 {
@@ -40,19 +41,50 @@ trait UploadTrait
         return $file;
     }
 
-    public function uploadBrandImage(UploadedFile $uploadedFile, $folder = null, $disk = 'public', $filename = null)
+    public function uploadBrandLogo(UploadedFile $uploadedFile, $folder = null, $disk = 'public', $filename = null)
     {
         // Paths
         $logo_photos_storage = public_path('images/site/brands/logo/');
-        $large_photos_storage = public_path('images/site/brands/large_photos/');
-        $medium_photos_storage = public_path('images/site/brands/medium_photos/');
-        $mobile_photos_storage = public_path('images/site/brands/mobile_photos/');
-        $tiny_photos_storage = public_path('images/site/brands/tiny_photos/');
-
+        $logo_photos_low_quality_storage = public_path('images/site/brands/logo_low_quality/');
 
         $name = !is_null($filename) ? $filename : Str::random(25);
 
         $file = $uploadedFile->storeAs($folder, $name.'.'.$uploadedFile->getClientOriginalExtension(), $disk);
+
+        $image = Image::make($file);
+
+        $image
+            ->resize(400, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($logo_photos_storage.$name. '.' .$uploadedFile->getClientOriginalExtension(),85);
+        return $file;
+    }
+
+    public function uploadBrandImage(UploadedFile $uploadedFile, $folder = null, $disk = 'public', $filename = null)
+    {
+
+        $name = !is_null($filename) ? $filename : Str::random(25);
+        // Paths
+
+        $large_photos_storage = public_path('images/site/brands/' . $name . '/large_photos/');
+        $medium_photos_storage = public_path('images/site/brands/' . $name . '/medium_photos/');
+        $mobile_photos_storage = public_path('images/site/brands/' . $name . '/mobile_photos/');
+        $tiny_photos_storage = public_path('images/site/brands/' . $name . '/tiny_photos/');
+
+        $file = $uploadedFile->storeAs($folder, $name.'.'.$uploadedFile->getClientOriginalExtension(), $disk);
+
+        if (! File::exists($large_photos_storage)) {
+            File::makeDirectory($large_photos_storage);
+        }
+        if (! File::exists($medium_photos_storage)) {
+            File::makeDirectory($medium_photos_storage);
+        }
+        if (! File::exists($mobile_photos_storage)) {
+            File::makeDirectory($mobile_photos_storage);
+        }
+        if (! File::exists($tiny_photos_storage)) {
+            File::makeDirectory($tiny_photos_storage);
+        }
 
         $image = Image::make($file);
 

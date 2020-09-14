@@ -13,7 +13,7 @@
 
                 <div class="row mt-5">
                   <div class="col-6">
-                    <div class="card aboutus-card mb-3">
+                    <div class="card aboutus-card mb-3 animation-element" id="card-brandbuilder">
                       <h5 class="card-header font-weight-bold">Merkbouwer</h5>
                       <div class="card-body">
                         <p class="card-text"><p class="text-left">Ons bedrijf heeft een sterke positie en een gerespecteerde naam als “merkbouwer” in ons marktgebied. Bickery Food Group is een familiebedrijf met meer dan 40 jaar expertise in fast moving consumer goods (FMCG) en blinkt uit in sterk ondernemerschap.</p></p>
@@ -21,7 +21,7 @@
                     </div>
                   </div>
                   <div class="col-6">
-                    <div class="card aboutus-card mb-3">
+                    <div class="card aboutus-card mb-3 animation-element" id="card-specialization">
                       <h5 class="card-header font-weight-bold">Specialisatie</h5>
                       <div class="card-body">
                         <p class="card-text"><p class="text-left">Wij zijn gespecialiseerd in verkoop, marketing, distributie, food concepting, opslag en transport. Bickery Food Group is een full service organisatie met een team van 80 gemotiveerde medewerkers, eigen distributiecentrum, eigen magazijn en transport (14 vrachtwagens). Dit zorgt er samen voor dat Bickery Food Group producten succesvol verkoopt aan alle mogelijke verkoopkanalen en levert via een uniek distributieplatform.</p></p>
@@ -29,7 +29,7 @@
                     </div>
                   </div>
                   <div class="col-6">
-                    <div class="card aboutus-card mb-5">
+                    <div class="card aboutus-card mb-5 animation-element" id="card-distributionchannel">
                       <h5 class="card-header font-weight-bold">Distributiekanalen</h5>
                       <div class="card-body">
                         <p class="card-text"><p class="text-left">Foodretailers, non-foodretailers, foodservice (groothandel / away from home), e-commerce, drogisterijen, bouwmarkten en zelfstandige/speciaalzaken.</p></p>
@@ -37,7 +37,7 @@
                     </div>
                   </div>
                   <div class="col-6">
-                    <div class="card aboutus-card mb-5">
+                    <div class="card aboutus-card mb-5 animation-element" id="card-partner">
                       <h5 class="card-header font-weight-bold">Eerste keus zakenpartner</h5>
                       <div class="card-body">
                         <p class="card-text"><p class="text-left">Door ons ruim geselecteerde assortiment van unieke producten, uitgebreide service en klantwaarde focus zijn wij de eerste keus zakenpartner van grote supermarktketens en foodservices door heel Nederland.</p></p>

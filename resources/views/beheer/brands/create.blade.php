@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="card-body">
-                  <form onsubmit="{{ route('beheer.brands.store') }}" method="POST">
+                  <form onsubmit="{{ route('beheer.brands.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="form-group">
@@ -46,7 +46,7 @@
 
                     <div class="form-group">
                       <label>Logo:</label>
-                      <input type="file" name="product_image" value="{{ old('product_image') }}" class="form-control">
+                      <input type="file" name="product_logo_image" value="{{ old('product_image') }}" class="form-control">
                     </div>
 
                     <div class="form-group">

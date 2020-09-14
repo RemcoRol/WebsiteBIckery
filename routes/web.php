@@ -69,12 +69,14 @@ Route::patch('/beheer/afbeeldingen/{menu}', 'ImageController@update')->middlewar
 Route::delete('/beheer/afbeeldingen/{menu}/delete', 'ImageController@destroy')->middleware('auth')->name('beheer.images.delete');
 
 // Clientside
-Route::redirect('/', '/nl');
+
+Route::redirect('/', '/home');
 
 Route::group(['prefix' => '{language}'], function() {
-	Route::get('/', function () {
-    	return view('site.pages.home');
-	})->name('site.pages.home');
+
+		Route::get('/', function () {
+	    	return view('site.pages.home');
+		})->name('site.pages.home');
 
     Route::get('/home', function () {
         return view('site.pages.home');
