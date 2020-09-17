@@ -16,6 +16,6 @@ class BrandImage extends Model
      * @var array
      */
     protected $fillable = [
-        'brand_image_name', 'brand_image_alt_text', 'brand_image_original_url', 'brand_image_large_url', 'brand_image_medium_url', 'brand_image_mobile_url', 'brand_image_tiny_url', 'brand_id'
+        'brand_image_name', 'brand_image_alt_text', 'brand_image_original_url', 'brand_image_large_url', 'brand_image_medium_url', 'brand_image_mobile_url', 'brand_image_tiny_url', 'brand_image_logo', 'brand_id'
     ];
 }

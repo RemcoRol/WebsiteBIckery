@@ -22,6 +22,7 @@ class CreateBrandImagesTable extends Migration
             $table->string('brand_image_medium_url');
             $table->string('brand_image_mobile_url');
             $table->string('brand_image_tiny_url');
+            $table->string('brand_image_logo');
 
             $table->integer('brand_id')->unsigned();
             $table->foreign('brand_id')->references('id')->on('brands')

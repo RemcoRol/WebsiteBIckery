@@ -54,15 +54,16 @@ class BrandController extends Controller
            'brand_name' => 'required',
            'categories_id' => 'required',
            'brand_hidden' => 'required',
-           'product_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-           'product_logo_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+           'brand_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+           'brand_logo_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
        ]);
 
        $brandId = $this->brandRepository->create($request->all());
 
-       if ($request->has('product_image')) {
+       if ($request->has('brand_image') && $request->has('brand_logo_image')) {
            // Get image file
-           $image = $request->file('product_image');
+           $image = $request->file('brand_image');
+           $logo = $request->file('brand_logo_image');
            // Make a image name based on user name and current timestamp
            $name = Str::slug($validatedData['brand_name']);
            // Define folder path
@@ -71,6 +72,7 @@ class BrandController extends Controller
            $product_image_url = $folder . $name. '.' . $image->getClientOriginalExtension();
            // Upload image
            $this->uploadBrandImage($image, $folder, 'public', $name);
+           $this->uploadBrandLogo($logo, $folder, 'public', $name);
            // Set user profile image path in database to filePath
            //$user->profile_image = $filePath;
 

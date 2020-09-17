@@ -43,11 +43,13 @@ trait UploadTrait
 
     public function uploadBrandLogo(UploadedFile $uploadedFile, $folder = null, $disk = 'public', $filename = null)
     {
-        // Paths
-        $logo_photos_storage = public_path('images/site/brands/logo/');
-        $logo_photos_low_quality_storage = public_path('images/site/brands/logo_low_quality/');
-
         $name = !is_null($filename) ? $filename : Str::random(25);
+        // Paths
+        $logo_photos_storage = public_path('images/site/brands/' . $name . '/logo/');
+
+        if (! File::exists($logo_photos_storage)) {
+            File::makeDirectory($logo_photos_storage);
+        }
 
         $file = $uploadedFile->storeAs($folder, $name.'.'.$uploadedFile->getClientOriginalExtension(), $disk);
 
@@ -56,16 +58,15 @@ trait UploadTrait
         $image
             ->resize(400, null, function ($constraint) {
                 $constraint->aspectRatio();
-            })->save($logo_photos_storage.$name. '.' .$uploadedFile->getClientOriginalExtension(),85);
+            })->save($logo_photos_storage.$name. '_logo.' .$uploadedFile->getClientOriginalExtension(),85);
         return $file;
     }
 
     public function uploadBrandImage(UploadedFile $uploadedFile, $folder = null, $disk = 'public', $filename = null)
     {
-
         $name = !is_null($filename) ? $filename : Str::random(25);
-        // Paths
 
+        // Paths
         $large_photos_storage = public_path('images/site/brands/' . $name . '/large_photos/');
         $medium_photos_storage = public_path('images/site/brands/' . $name . '/medium_photos/');
         $mobile_photos_storage = public_path('images/site/brands/' . $name . '/mobile_photos/');

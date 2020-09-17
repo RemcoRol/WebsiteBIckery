@@ -46,12 +46,12 @@
 
                     <div class="form-group">
                       <label>Logo:</label>
-                      <input type="file" name="product_logo_image" value="{{ old('product_image') }}" class="form-control">
+                      <input type="file" name="brand_logo_image" value="{{ old('brand_logo_image') }}" class="form-control">
                     </div>
 
                     <div class="form-group">
                       <label>Sfeerafbeelding:</label>
-                      <input type="file" name="product_image" value="{{ old('product_image') }}" class="form-control">
+                      <input type="file" name="brand_image" value="{{ old('brand_image') }}" class="form-control">
                     </div>
 
                     <button type="submit" class="btn btn-primary float-right">Opslaan</button>

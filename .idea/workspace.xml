@@ -23,40 +23,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11beb69c-0742-473e-a55b-60a250ca865f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Daim/daim.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Daim/large_photos/daim.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Daim/medium_photos/daim.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Daim/mobile_photos/daim.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Daim/tiny_photos/daim.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Website.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Test/large_photos/test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Test/logo/test_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Test/medium_photos/test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Test/mobile_photos/test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Test/test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Test/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Test/tiny_photos/test.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BrandController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BrandController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/BrandImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BrandImage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/BrandImageRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/BrandImageRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/BrandRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/BrandRepositoryInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Traits/UploadTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/UploadTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_09_094139_brand_images.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_09_134428_create_brand_images_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/MenuTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/MenuTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PageTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PageTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/beheer-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/beheer-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/client-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/client-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/main-beheer.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main-beheer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/main-client.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main-client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/clients/main-client.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/clients/main-client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_14_111544_create_brand_images_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_14_111544_create_brand_images_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/site/brands/Daim/daim.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/site/brands/Daim/large_photos/daim.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/site/brands/Daim/medium_photos/daim.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/site/brands/Daim/mobile_photos/daim.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/site/brands/Daim/tiny_photos/daim.PNG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/beheer/brands/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/beheer/brands/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/pages/over-ons.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/pages/over-ons.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,6 +217,9 @@
       <workItem from="1597220965668" duration="10776000" />
       <workItem from="1597732390795" duration="38108000" />
       <workItem from="1600084724420" duration="6112000" />
+      <workItem from="1600152170350" duration="1752000" />
+      <workItem from="1600154209099" duration="1832000" />
+      <workItem from="1600156263112" duration="716000" />
     </task>
     <servers />
   </component>
