@@ -51,7 +51,7 @@ trait UploadTrait
             File::makeDirectory($logo_photos_storage);
         }
 
-        $file = $uploadedFile->storeAs($folder, $name.'.'.$uploadedFile->getClientOriginalExtension(), $disk);
+        $file = $uploadedFile->storeAs($folder, $name.'_logo_original.'.$uploadedFile->getClientOriginalExtension(), $disk);
 
         $image = Image::make($file);
 
@@ -75,16 +75,16 @@ trait UploadTrait
         $file = $uploadedFile->storeAs($folder, $name.'.'.$uploadedFile->getClientOriginalExtension(), $disk);
 
         if (! File::exists($large_photos_storage)) {
-            File::makeDirectory($large_photos_storage);
+            File::makeDirectory($large_photos_storage, 0755, true, true);
         }
         if (! File::exists($medium_photos_storage)) {
-            File::makeDirectory($medium_photos_storage);
+            File::makeDirectory($medium_photos_storage, 0755, true, true);
         }
         if (! File::exists($mobile_photos_storage)) {
-            File::makeDirectory($mobile_photos_storage);
+            File::makeDirectory($mobile_photos_storage, 0755, true, true);
         }
         if (! File::exists($tiny_photos_storage)) {
-            File::makeDirectory($tiny_photos_storage);
+            File::makeDirectory($tiny_photos_storage, 0755, true, true);
         }
 
         $image = Image::make($file);

@@ -21,6 +21,7 @@ class CreateBrandsTable extends Migration
             ->references('id')->on('categories')
             ->onDelete('cascade');
             $table->boolean('brand_hidden');
+            $table->string('brand_color');
             $table->timestamps();
         });
     }

@@ -11,6 +11,7 @@ return [
         'premium-brands' => 'Premium Brands',
         'premium-food' => 'Premium Food',
         'premium-drinks' => 'Premium Drinks',
+        'merken' => 'Brands',
         'geschenkpakketten' => 'Christmas',
         'thema-collecties' => 'Theme Collections',
         'product-groepen' => 'Product Groups',

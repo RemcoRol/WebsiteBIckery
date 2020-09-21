@@ -70,13 +70,13 @@ Route::delete('/beheer/afbeeldingen/{menu}/delete', 'ImageController@destroy')->
 
 // Clientside
 
-Route::redirect('/', '/home');
+Route::redirect('/', '/nl/home');
 
 Route::group(['prefix' => '{language}'], function() {
 
-		Route::get('/', function () {
-	    	return view('site.pages.home');
-		})->name('site.pages.home');
+    Route::get('/', function () {
+        return view('site.pages.home');
+    })->name('site.pages.home');
 
     Route::get('/home', function () {
         return view('site.pages.home');

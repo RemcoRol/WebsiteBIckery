@@ -15,6 +15,7 @@ use App\Traits\UploadTrait;
 class ProductController extends Controller
 {
     use UploadTrait;
+
     private $productRepository;
     private $productImageRepository;
     private $brandRepository;
@@ -23,8 +24,9 @@ class ProductController extends Controller
     {
         $this->productRepository = $productRepository;
         $this->productImageRepository = $productImageRepository;
-        $this->brandRepository   = $brandRepository;
+        $this->brandRepository = $brandRepository;
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -46,19 +48,19 @@ class ProductController extends Controller
      */
     public function create()
     {
-      $products = $this->productRepository->all();
-      $brands = $this->brandRepository->all();
+        $products = $this->productRepository->all();
+        $brands = $this->brandRepository->all();
 
-      return view('beheer.products.create', [
-          'products' => $products,
-          'brands'   => $brands
-      ]);
+        return view('beheer.products.create', [
+            'products' => $products,
+            'brands' => $brands
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -76,11 +78,11 @@ class ProductController extends Controller
             // Get image file
             $image = $request->file('product_image');
             // Make a image name based on user name and current timestamp
-            $name = Str::slug($request->input('product_name')).'_'.time();
+            $name = Str::slug($request->input('product_name')) . '_' . time();
             // Define folder path
             $folder = 'images/products/' . $createdProduct->brand->brand_name . '/product_images/';
             // Make a file path where image will be stored [ folder path + file name + file extension]
-            $product_image_url = $folder . $name. '.' . $image->getClientOriginalExtension();
+            $product_image_url = $folder . $name . '.' . $image->getClientOriginalExtension();
             // Upload image
             $this->uploadPackShot($image, $folder, 'public', $name);
             // Set user profile image path in database to filePath
@@ -97,7 +99,7 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -108,7 +110,7 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -119,8 +121,8 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -131,30 +133,27 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-      $product = $this->productRepository->get($id);
-      // Remove images from storage
+        $product = $this->productRepository->get($id);
+        // Remove images from storage
 
-      $productImages = $product->productImages;
+        $productImages = $product->productImages;
 
-      foreach ($productImages as $productImage) {
-        if(\File::exists($productImage->product_image_url)){
+        foreach ($productImages as $productImage) {
+            if (File::exists($productImage->product_image_url)) {
 
-          \File::delete($productImage->product_image_url);
-
-        }else{
-          dd('File does not exists.');
+                File::delete($productImage->product_image_url);
+            }
+            // Remove child model
+            $productImage->delete();
         }
-        // Remove child model
-        $productImage->delete();
-      }
 
-      // Remove model
-      $product->delete();
-      return redirect()->route('beheer.products.index')->with('message', 'Product is successvol verwijderd!');
+        // Remove model
+        $product->delete();
+        return redirect()->route('beheer.products.index')->with('message', 'Product is successvol verwijderd!');
     }
 }

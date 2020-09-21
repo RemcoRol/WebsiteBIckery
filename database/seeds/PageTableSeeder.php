@@ -25,6 +25,8 @@ class PageTableSeeder extends Seeder
             ['page_name' => 'Testimonials', 'page_hidden' => 0, 'page_slug' => 'testimonials', 'page_meta_title' => 'SEO Informatie voor home', 'page_meta_description' => 'Meta description voor home'],
             ['page_name' => 'Vacatures', 'page_hidden' => 0, 'page_slug' => 'vacatures', 'page_meta_title' => 'SEO Informatie voor home', 'page_meta_description' => 'Meta description voor home'],
             ['page_name' => 'Nieuws', 'page_hidden' => 0, 'page_slug' => 'nieuws', 'page_meta_title' => 'SEO Informatie voor home', 'page_meta_description' => 'Meta description voor home'],
+            ['page_name' => 'Merken', 'page_hidden' => 0, 'page_slug' => 'merken', 'page_meta_title' => 'SEO Informatie voor home', 'page_meta_description' => 'Meta description voor home'],
+            ['page_name' => 'Brand Activation', 'page_hidden' => 0, 'page_slug' => 'merk-activatie', 'page_meta_title' => 'SEO Informatie voor home', 'page_meta_description' => 'Meta description voor home'],
             ['page_name' => 'Contact', 'page_hidden' => 0, 'page_slug' => 'contact', 'page_meta_title' => 'SEO Informatie voor home', 'page_meta_description' => 'Meta description voor home'],
         ]);
     }

@@ -34,28 +34,64 @@
 		<div class="col-6 pr-0 pl-0">
 			<img src="https://www.bickery.nl/images/our-story-01.jpg" class="mw-100 w-100 mx-auto d-block img-responsive" alt="bickery-home-image">
 		</div>
-		<div class="col-6 pr-0 pl-0">
+		<div class="col-6 pr-0 pl-0 animated-element" id="brochure-section">
 			<img src="https://www.bickery.nl/images/brochure.jpg" class="mx-auto d-block img-responsive" alt="bickery-brochure-image">
 			<p class="mt-4 text-center">
 				<a href="#">{{ __('site.home.brochure') }}</a>
 			</p>
 		</div>
-    <div class="col-12 pl-0 pr-0">
-        <div class="home-parallax">
-            <div class="home-parallax-text">
-                <div class="text-center">
-                    <h3 class="home-parallax-subtitle">Bekijk hier ons</h3>
-                    <h1 class="home-parallax-title mt-3">Sucessverhaal</h1>
-										<a href="#" class="play-video-button mt-2"><i class="fa fa-play fa-2x"></i></a>
+        <div class="col-12 pl-0 pr-0">
+            <div class="home-parallax">
+                <div class="home-parallax-text">
+                    <div class="text-center">
+                        <h3 class="home-parallax-subtitle">Bekijk hier ons</h3>
+                        <h1 class="home-parallax-title mt-3">Sucessverhaal</h1>
+                        <a href="#" class="play-video-button mt-2"><i class="fa fa-play fa-2x"></i></a>
+                    </div>
                 </div>
-
             </div>
         </div>
-    </div>
-    <div class="col-12 pl-0 pr-0">
-			<p class="mt-4">
-				<h3 class="home-news-title text-center">{{ __('site.home.news') }}</h3>
-			</p>
+        <div class="col-12">
+            <h3 class="home-news-title text-center mt-5">{{ __('site.home.news') }}</h3>
+            <div class="row mt-5 mb-5 animated-element" id="news-section">
+                <div class="col-4">
+                    <div class="card-deck">
+                        <div class="card">
+                            <img class="card-img-top" src="https://www.bickery.nl/beheer/uploads/nieuws/nieuws_vitacoco_vierkant.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Nieuws titel</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small><p><small>Read more</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card-deck">
+                        <div class="card">
+                            <img class="card-img-top" src="https://www.bickery.nl/beheer/uploads/nieuws/nieuws_vitacoco_vierkant.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Nieuws titel</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small><p><small>Read more</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card-deck">
+                        <div class="card">
+                            <img class="card-img-top" src="https://www.bickery.nl/beheer/uploads/nieuws/nieuws_vitacoco_vierkant.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Nieuws titel</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small><p><small>Read more</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 	</div>
 </div>

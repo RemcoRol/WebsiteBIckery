@@ -98,15 +98,30 @@ class PageController extends Controller
     {
         $page = $this->pageRepository->getBySlug($slug);
 
-        if ($page->page_slug == "premium-food") {
+        if ($page->page_slug == "premium-food" || $page->page_slug == "premium-drinks") {
 
             $page = $this->pageRepository->getBySlug($slug);
             $categories = $this->categoryRepository->getByName($page->page_name);
 
-            return view('site.pages.' . $page->page_slug, compact('page', 'categories'));
+            $brands = $categories->merken->sortBy('brand_name');
+
+            return view('site.pages.' . $page->page_slug, compact('page', 'brands'));
         }
 
-        return view('site.pages.' . $page->page_slug, compact('page'));
+
+        if ($page->page_slug == "merken") {
+            $page = $this->pageRepository->getBySlug($slug);
+            $brands = $this->brandRepository->orderBy('brand_name');
+
+            return view('site.pages.' . $page->page_slug, compact('page', 'brands'));
+        }
+
+        if ($page != null) {
+            return view('site.pages.' . $page->page_slug, compact('page'));
+        }
+        else {
+            abort(404);
+        }
 
     }
 

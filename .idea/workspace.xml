@@ -23,24 +23,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11beb69c-0742-473e-a55b-60a250ca865f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Test/large_photos/test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Test/logo/test_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Test/medium_photos/test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Test/mobile_photos/test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Test/test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Test/test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Test/tiny_photos/test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/Tabasco/product_images/chipotle_1600694981.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/Tabasco/product_images/habanero-saus_1600694935.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/Tabasco/product_images/pepersaus-rood_1600694885.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/Tabasco/product_images/scorpion-saus_1600695016.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Tabasco/large_photos/tabasco.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Tabasco/logo/tabasco_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Tabasco/medium_photos/tabasco.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Tabasco/mobile_photos/tabasco.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Tabasco/tabasco.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Tabasco/tabasco_logo_original.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/site/brands/Tabasco/tiny_photos/tabasco.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/site/pages/merken.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Website.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BrandController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BrandController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/BrandImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BrandImage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Brand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Brand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/Eloquent/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Eloquent/CategoryRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Traits/UploadTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/UploadTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_08_124956_create_brands_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_08_124956_create_brands_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_14_111544_create_brand_images_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_14_111544_create_brand_images_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/site/brands/Daim/daim.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/site/brands/Daim/large_photos/daim.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/site/brands/Daim/medium_photos/daim.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/site/brands/Daim/mobile_photos/daim.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/site/brands/Daim/tiny_photos/daim.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/MenuTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/MenuTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/PageTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PageTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/client-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/client-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/main-client.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main-client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/clients/main-client.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/clients/main-client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/site.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/nl/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/nl/site.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/client-style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/client-style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/beheer/brands/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/beheer/brands/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/beheer/brands/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/beheer/brands/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/clients.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/clients.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/pages/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/pages/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/pages/over-ons.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/pages/over-ons.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/pages/premium-drinks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/pages/premium-drinks.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/pages/premium-food.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/pages/premium-food.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +191,9 @@
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
       <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fckn8hTX9YbovZPj2Gcjh4thBr" />
@@ -182,18 +210,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\BickeryLaravel\Website\resources\views\layouts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\BickeryLaravel\Website\public\images\misc" />
       <recent name="C:\wamp64\www\BickeryLaravel\Website\public\images\site\global" />
       <recent name="C:\wamp64\www\BickeryLaravel\Website\public\storage\images" />
       <recent name="C:\wamp64\www\BickeryLaravel\Website\app\Models" />
       <recent name="C:\wamp64\www\BickeryLaravel\Website\public\images\site\home" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\BickeryLaravel\Website\resources\views\layouts" />
     </key>
   </component>
   <component name="RunManager">
@@ -220,6 +249,9 @@
       <workItem from="1600152170350" duration="1752000" />
       <workItem from="1600154209099" duration="1832000" />
       <workItem from="1600156263112" duration="716000" />
+      <workItem from="1600334513671" duration="16409000" />
+      <workItem from="1600417221458" duration="12401000" />
+      <workItem from="1600673537516" duration="16316000" />
     </task>
     <servers />
   </component>
@@ -260,30 +292,39 @@
     </state>
     <state x="-1230" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1596613479869" />
     <state x="460" y="180" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1597735171320" />
-    <state x="703" y="243" key="NewPhpClassDialog" timestamp="1600084932151">
+    <state x="703" y="243" key="NewPhpClassDialog" timestamp="1600688896386">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1217" y="243" key="NewPhpClassDialog/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1596544991438" />
-    <state x="703" y="243" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600084932151" />
+    <state x="703" y="243" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600688896386" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1600334681969">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600334681969" />
     <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1597240672780">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1597240672780" />
+    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1600688872086">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600688872086" />
     <state x="-1184" y="292" key="refactoring.ChangeSignatureDialog" timestamp="1596542954955">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1184" y="292" key="refactoring.ChangeSignatureDialog/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1596542954955" />
-    <state x="446" y="231" key="run.anything.popup" timestamp="1600085981855">
+    <state x="446" y="231" key="run.anything.popup" timestamp="1600344947113">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1474" y="231" key="run.anything.popup/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1597224490616" />
     <state x="297" y="151" key="run.anything.popup/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1597759980452" />
-    <state x="446" y="231" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600085981855" />
-    <state x="-1465" y="2" width="1008" height="1037" key="search.everywhere.popup" timestamp="1597233766576">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="446" y="231" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600344947113" />
+    <state x="455" y="2" width="1008" height="1037" key="search.everywhere.popup" timestamp="1600345812640">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1465" y="2" width="1008" height="1037" key="search.everywhere.popup/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1597233766576" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1596527260173" />
+    <state x="455" y="2" width="1008" height="1037" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600345812640" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
